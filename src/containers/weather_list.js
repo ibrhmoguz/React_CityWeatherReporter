@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 
 class WeatherList extends Component {
     renderWeather(cityData) {
+        if (cityData === undefined)
+            return;
+
         const name = cityData.city.name;
         return (
             <tr key={cityData.city.id}>
